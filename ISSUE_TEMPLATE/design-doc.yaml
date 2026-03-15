@@ -1,0 +1,86 @@
+name: Design Doc
+description: 新機能や大きな変更の設計を文書化する
+title: "[Design Doc]"
+labels: ["design-doc"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        このテンプレートは、新機能や大きな変更を実装する前に設計を文書化するためのものです。
+
+        **手順**:
+        1. このIssueで Design Doc の概要をまとめる
+        2. 詳細な Design Doc を `doc/design_doc/[issue-number]-[feature-name].md` に作成
+        3. 実装に進む
+
+                詳細は、[Design Doc ガイドライン](../../doc/design_doc/README.md)を参照してください。
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: "🎯 概要・目的"
+      description: "この機能で実現したいことを簡潔に説明してください"
+      placeholder: |
+        例：ユーザーがプロフィールを複数作成・管理できる機能を実装する
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: "🤔 背景"
+      description: "課題・動機を説明してください"
+      placeholder: |
+        **問題点・課題**:
+        - 複数のニーズに対応できない
+
+        **動機**:
+        - ユーザーの利便性向上
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "💡 実装詳細"
+      description: "実装方針と主な変更点を説明してください"
+      placeholder: |
+        **主な変更点**:
+        - プロフィール作成画面の追加
+        - プロフィール一覧表示の実装
+        - APIの拡張
+    validations:
+      required: true
+
+  - type: textarea
+    id: differences
+    attributes:
+      label: "仕様・既存のものとの相違点"
+      description: "既存機能との相違点や従うべき仕様があれば記載してください"
+      placeholder: "既存のプロフィール機能との相違点を説明してください"
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "⚠️ リスク & 対策"
+      description: "潜在的な問題と対策を記載してください"
+      placeholder: |
+        | リスク | 対策 |
+        |---|---|
+        | DBパフォーマンス低下 | インデックスを適切に設定 |
+
+  - type: textarea
+    id: references
+    attributes:
+      label: "📎 参考資料"
+      description: "関連するドキュメントやリンクがあれば記載してください"
+      placeholder: |
+        - [Design Doc ガイドライン](../../doc/design_doc/README.md)
+        - [Design Doc テンプレート](../../doc/design_doc/template.md)
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "✍️ 補足・メモ"
+      description: "その他、補足事項があれば記載してください"
+      placeholder: "補足事項があれば記載してください"
